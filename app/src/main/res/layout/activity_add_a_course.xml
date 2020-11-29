@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_a_Course"
+    android:background="@drawable/gradient_background">
+
+    <EditText
+        android:id="@+id/add_course_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        android:hint="Enter Course Name"
+        android:background="@drawable/smooth_edge_text_views"
+        android:padding="20dp"
+        />
+
+    <Button
+        android:id="@+id/confirm_add_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_edge_text_view"
+        android:text="Add Course"
+        android:padding="20dp"
+        android:layout_marginBottom="50sp"
+        android:onClick="BackToCourseList"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

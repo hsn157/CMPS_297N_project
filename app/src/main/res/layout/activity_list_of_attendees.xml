@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".List_of_Attendees"
+    android:background="@drawable/gradient_background">
+    <TextView
+        android:id="@+id/course_title_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50sp"
+        android:background="@drawable/smooth_edge_text_views"
+        android:text="Course name here \n Section #, date and \n time"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        />
+
+    <TextView
+        android:id="@+id/attendance_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Here"
+        app:layout_constraintTop_toBottomOf="@id/course_title_attendance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50sp"
+        android:padding="20dp"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:id="@+id/attendees_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/attendance_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:text="Attendees"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        />
+
+    <ListView
+        android:id="@+id/attendees_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/attendees_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="false"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

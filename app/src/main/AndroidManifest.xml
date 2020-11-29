@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CMPS297N_Attendance_Tracker">
+        <activity android:name=".Take_Manual_Attendance"></activity>
+        <activity android:name=".Take_Attendance" />
+        <activity android:name=".List_of_Attendees" />
+        <activity android:name=".Section_Information" />
+        <activity android:name=".Add_a_Course" />
+        <activity android:name=".Course_Info" />
+        <activity android:name=".List_Courses" />
+        <activity android:name=".Sign_in" />
+        <activity android:name=".Sign_up" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
