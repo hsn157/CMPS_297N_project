@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".List_of_Attendees"
     android:background="@drawable/gradient_background">
+
+    <Button
+        android:id="@+id/manual_attendance3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="backToDates"
+        android:paddingHorizontal="50dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
     <TextView
         android:id="@+id/course_title_attendance"
         android:layout_width="wrap_content"
@@ -50,10 +62,10 @@
     <ListView
         android:id="@+id/attendees_list"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/attendees_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
         android:clickable="false"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/manual_attendance3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/attendees_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>

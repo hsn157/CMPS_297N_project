@@ -4,57 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Take_Attendance"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/gradient_background"
+    tools:context=".Take_Attendance">
+
+    <Button
+        android:id="@+id/manual_attendance2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="backToDates"
+        android:paddingHorizontal="50dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/take_attendance_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="20dp"
+        android:background="@drawable/smooth_edge_text_views"
         android:padding="10dp"
         android:text="Today's Attendance"
-        android:background="@drawable/smooth_edge_text_views"
         android:textSize="20sp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/scan_ID"
         android:layout_width="300sp"
         android:layout_height="150sp"
-        app:layout_constraintTop_toBottomOf="@id/take_attendance_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="30dp"
         android:background="@color/black"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/take_attendance_title" />
+
     <Button
         android:id="@+id/capture_id_photo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/scan_ID"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="20sp"
-        android:text="Take ID Photo"
-        android:paddingHorizontal="50dp"
         android:background="@drawable/smooth_edges_buttons"
-        />
+        android:paddingHorizontal="50dp"
+        android:text="Take ID Photo"
+        android:onClick="scanBarcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scan_ID" />
 
     <Button
         android:id="@+id/manual_attendance"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Add Manually"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/smooth_edges_buttons"
-        android:paddingHorizontal="50dp"
         android:onClick="ManualEntry"
-        />
+        android:paddingHorizontal="50dp"
+        android:text="Add Manually"
+        app:layout_constraintBottom_toTopOf="@+id/manual_attendance2"
+        tools:layout_editor_absoluteX="0dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
