@@ -25,38 +25,41 @@ public class Student {
     @ColumnInfo(name = "course_section")
     private String course_section;
 
-
-
     @NonNull
     @ColumnInfo(name = "date")
-    public String date;
+    private String date;
 
 
     @NonNull
     @ColumnInfo(name = "student_name")
-    public String student_name;
+    private String student_name;
 
 
     @NonNull
     @ColumnInfo(name = "student_id")
-    public int student_id;
+    private int student_id;
+
+    @NonNull
+    @ColumnInfo(name = "time")
+    private String time;
 
 
     public Student(@NonNull String username, @NonNull String course_name, @NonNull String course_section, @NonNull String date, @NonNull String student_name,
-                   @NonNull int student_id ){
+                   @NonNull int student_id, @NonNull String time){
         this.username = username;
         this.course_name = course_name;
         this.course_section = course_section;
         this.date = date;
         this.student_name = student_name;
         this.student_id = student_id;
+        this.time = time;
     }
 
 
 
     @Ignore
     public Student(int id, @NonNull String username, @NonNull String course_name, @NonNull String course_section, @NonNull String date, @NonNull String student_name,
-                   @NonNull int student_id ){
+                   @NonNull int student_id, @NonNull String time ){
         this.id = id;
         this.username = username;
         this.course_name = course_name;
@@ -64,6 +67,7 @@ public class Student {
         this.date = date;
         this.student_name = student_name;
         this.student_id = student_id;
+        this.time = time;
     }
 
     public int getId() {return id;}
@@ -94,5 +98,9 @@ public class Student {
 
     public int getStudent_id(){
         return this.student_id;
+    }
+
+    public String getTime(){
+        return this.time;
     }
 }

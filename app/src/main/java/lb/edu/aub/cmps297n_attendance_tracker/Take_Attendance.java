@@ -13,11 +13,13 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import CoursesDB.CourseDao;
-import CoursesDB.CourseDatabase;
+
 import StudentsDB.Student;
 import StudentsDB.StudentDao;
 import StudentsDB.StudentDatabase;
+
+import java.util.Calendar;
+
 
 import static lb.edu.aub.cmps297n_attendance_tracker.Section_Information.COURSE_DATE;
 import static lb.edu.aub.cmps297n_attendance_tracker.Take_Manual_Attendance.STUDENT_ID;
@@ -129,7 +131,16 @@ public class Take_Attendance extends AppCompatActivity {
                     t1.show();
                 }
                 else{
-                    studentDao.insert(new Student(studentInfo[0], studentInfo[1], studentInfo[2], studentInfo[3], studentInfo[4], Integer.parseInt(studentInfo[5])));
+                    Calendar rightNow = Calendar.getInstance();
+                    int minutes = rightNow.get(Calendar.MINUTE);
+
+                    int hours = rightNow.get(Calendar.HOUR);
+                    String am_pm = "PM";
+                    if(rightNow.get(Calendar.AM_PM) == 0){
+                        am_pm = "AM";
+                    }
+                    String time = hours + ":" + minutes + " " + am_pm;
+                    studentDao.insert(new Student(studentInfo[0], studentInfo[1], studentInfo[2], studentInfo[3], studentInfo[4], Integer.parseInt(studentInfo[5]), time));
                     t2.show();
                 }
             }

@@ -28,7 +28,7 @@ public class Date {
 
     @NonNull
     @ColumnInfo(name = "date")
-    public String date;
+    private String date;
 
  /*
     @NonNull

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -38,6 +39,11 @@ public class List_of_Attendees extends AppCompatActivity {
         final Bundle extras = getIntent().getExtras();
         studentsInfo = extras.getStringArray(COURSE_DATE);
 
+        TextView date = findViewById(R.id.attendance_date);
+        date.setText("Date: " + studentsInfo[3]);
+        TextView _info = findViewById(R.id.course_title_attendance);
+        String currentSection = "User: " + studentsInfo[0] + "\n" + "Course Name: " + studentsInfo[1] + "\n" + "Course Section: " + studentsInfo[2];
+        _info.setText(currentSection);
         addStudentsProcess();
     }
 
@@ -51,7 +57,8 @@ public class List_of_Attendees extends AppCompatActivity {
 
                 for(int i=0; i< studentsList.size(); i++){
 
-                    studentArray[i] = "Name: " + studentsList.get(i).getStudent_name() + ", ID: " + studentsList.get(i).getStudent_id();
+                    studentArray[i] = "Name: " + studentsList.get(i).getStudent_name() + ", ID: " + studentsList.get(i).getStudent_id() +
+                            ", Arrived @ " + studentsList.get(i).getTime();
                 }
             }
         });

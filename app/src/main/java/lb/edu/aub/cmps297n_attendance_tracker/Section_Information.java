@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -36,6 +37,7 @@ public class Section_Information extends AppCompatActivity {
     String[] courseInfo;
     Bundle extras;
 
+    TextView course_data;
     private Calendar calendar;
     private SimpleDateFormat dateFormat;
     private String date;
@@ -48,12 +50,16 @@ public class Section_Information extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_section_information);
         listView = (ListView) findViewById(R.id.dates_list);
+        course_data = findViewById(R.id.course_title);
+
 
         dateDatabase = DateDatabase.getDatabase(getApplicationContext());
         dateDao = dateDatabase.dateDao();
         extras = getIntent().getExtras();
         courseInfo = extras.getStringArray(COURSE_INFO);
 
+        String currentSection = "User: " + courseInfo[0] + "\n" + "Course Name: " + courseInfo[1] + "\n" + "Course Section: " + courseInfo[2];
+        course_data.setText(currentSection);
         addDateProcess();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
