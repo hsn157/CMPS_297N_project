@@ -6,6 +6,15 @@ import androidx.room.Query;
 
 import java.util.List;
 
+/**
+ * Interface to interact with the DB
+ *
+ * Insert a new Date
+ *
+ * Query All dates, for a specific user and course name/section
+ *
+ * Query and check if a date already exists, for a specific user and course name/section
+ */
 @Dao
 public interface DateDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -18,13 +27,4 @@ public interface DateDao {
             " course_section = :course_section AND date = :date)")
     boolean checkDateExists(String username, String course_name, String course_section, String date);
 
-
-    /*
-    @Query("SELECT EXISTS (SELECT * FROM users_table WHERE username = :username)")
-    boolean checkUserExists(String username);
-
-    @Query("SELECT EXISTS (SELECT * FROM users_table WHERE username = :username AND password = :password)")
-    boolean checkPassword(String username, String password);
-
-     */
 }

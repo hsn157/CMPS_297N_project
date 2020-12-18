@@ -6,6 +6,10 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+/**
+ * Dates table Entity Skeleton for storing dates per section per course per user
+ * With all getters methods
+ */
 @Entity(tableName = "dates_table")
 public class Date {
 
@@ -30,16 +34,6 @@ public class Date {
     @ColumnInfo(name = "date")
     private String date;
 
- /*
-    @NonNull
-    @ColumnInfo(name = "course_name")
-    public int student_id;
-
-     */
-
-
-
-
 
     public Date(@NonNull String username, @NonNull String course_name, @NonNull String course_section, @NonNull String date){
         this.username = username;
@@ -47,16 +41,6 @@ public class Date {
         this.course_section = course_section;
         this.date = date;
     }
-/*
-    public Course(@NonNull String username, @NonNull String course_name, @NonNull String course_section, @NonNull String date, @NonNull int student_id){
-        this.username = username;
-        this.course_name = course_name;
-        this.course_section = course_section;
-        this.date = date;
-        this.student_id = student_id;
-    }
-
-     */
 
     @Ignore
     public Date(int id, @NonNull String username, @NonNull String course_name, @NonNull String course_section, @NonNull String date){//, , @NonNull int student_id){

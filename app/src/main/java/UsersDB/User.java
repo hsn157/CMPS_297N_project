@@ -5,7 +5,10 @@ import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import androidx.annotation.NonNull;
-
+/**
+ * User table Entity that previews the skeleton
+ * With getters methods
+ */
 @Entity(tableName = "users_table")
 public class User {
 

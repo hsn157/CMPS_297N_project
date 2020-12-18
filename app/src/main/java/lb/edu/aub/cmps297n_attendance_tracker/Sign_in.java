@@ -1,26 +1,17 @@
 package lb.edu.aub.cmps297n_attendance_tracker;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
-
-import UsersDB.User;
 import UsersDB.UserDao;
 import UsersDB.UserRoomDatabase;
-import UsersDB.UserViewModel;
 
 public class Sign_in extends AppCompatActivity {
 

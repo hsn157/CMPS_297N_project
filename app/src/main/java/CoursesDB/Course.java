@@ -6,6 +6,10 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import androidx.annotation.NonNull;
 
+/**
+ *Courses table Entity Skeleton for storing courses per user
+ *With all getters methods
+ */
 @Entity(tableName = "courses_table")
 public class Course {
 
@@ -23,46 +27,12 @@ public class Course {
     @NonNull
     @ColumnInfo(name = "course_section")
     private String course_section;
-    /*
-    @NonNull
-    @ColumnInfo(name = "course_section")
-    public String course_section;
-
-    @NonNull
-    @ColumnInfo(name = "date")
-    public String date;
-
-
-    @NonNull
-    @ColumnInfo(name = "course_name")
-    public int student_id;
-
-     */
 
     public Course(@NonNull String username, @NonNull String course_name, @NonNull String course_section){
         this.username = username;
         this.course_name = course_name;
         this.course_section = course_section;
     }
-    /*
-
-
-    public Course(@NonNull String username, @NonNull String course_name, @NonNull String course_section, @NonNull String date){
-        this.username = username;
-        this.course_name = course_name;
-        this.course_section = course_section;
-        this.date = date;
-    }
-
-    public Course(@NonNull String username, @NonNull String course_name, @NonNull String course_section, @NonNull String date, @NonNull int student_id){
-        this.username = username;
-        this.course_name = course_name;
-        this.course_section = course_section;
-        this.date = date;
-        this.student_id = student_id;
-    }
-
-     */
 
     @Ignore
     public Course(int id, @NonNull String username, @NonNull String course_name, @NonNull String course_section){//, , @NonNull String date, @NonNull int student_id){
