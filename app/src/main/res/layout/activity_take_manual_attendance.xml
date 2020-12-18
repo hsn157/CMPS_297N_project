@@ -42,7 +42,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="20sp"
+        android:layout_margin="16dp"
         android:text="Take Attendance"
         android:padding="20sp"
         android:background="@drawable/smooth_edges_buttons"
