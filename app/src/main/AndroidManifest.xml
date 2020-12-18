@@ -17,7 +17,6 @@
         <activity android:name=".List_of_Attendees" />
         <activity android:name=".Section_Information" />
         <activity android:name=".Add_a_Course" />
-        <activity android:name=".Course_Info" />
         <activity android:name=".List_Courses" />
         <activity android:name=".Sign_in" />
         <activity android:name=".Sign_up" />

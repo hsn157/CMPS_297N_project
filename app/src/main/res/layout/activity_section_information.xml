@@ -18,8 +18,7 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/dates_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/dates_title"

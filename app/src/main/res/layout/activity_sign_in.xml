@@ -4,58 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sign_in"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/gradient_background"
+    tools:context=".Sign_in">
+
+
+    <Button
+        android:id="@+id/confirm_sign_in_button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/smooth_edges_buttons"
+        android:onClick="confirmSignIn"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="10dp"
+        android:text="@string/sign_in_text"
+        app:layout_constraintBottom_toTopOf="@+id/backtoMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/sign_in_email"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/smooth_edge_text_views"
+        android:hint="Username"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:hint="Email"
-        android:textSize="30sp"
-        android:padding="20dp"
-        android:layout_marginVertical="10dp"
-        android:layout_marginHorizontal="30dp"
-        android:background="@drawable/smooth_edge_text_views"
-        android:inputType="textEmailAddress"
-        />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
 
         android:id="@+id/sign_in_pass"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/sign_in_email"
-        android:hint="Password"
-        android:textSize="30sp"
-        android:padding="20dp"
-        android:layout_marginVertical="10dp"
         android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/smooth_edge_text_views"
+        android:hint="Password"
         android:inputType="textPassword"
-        />
+        android:padding="20dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_email" />
+
     <Button
-        android:id="@+id/confirm_sign_in_button"
-        android:layout_width="wrap_content"
+        android:id="@+id/backtoMain"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/sign_in_text"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/sign_in_pass"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/smooth_edges_buttons"
-        android:layout_marginTop="50dp"
-        android:onClick="confirmSignIn"
-        />
+        android:onClick="backToMain"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="10dp"
+        android:text="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

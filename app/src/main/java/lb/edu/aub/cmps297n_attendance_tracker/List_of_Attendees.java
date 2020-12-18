@@ -20,13 +20,21 @@ import static lb.edu.aub.cmps297n_attendance_tracker.Section_Information.COURSE_
 
 public class List_of_Attendees extends AppCompatActivity {
 
-    StudentDao studentDao;
-    StudentDatabase studentDatabase;
-    List<Student> studentsList;
-    String[] studentArray;
-    String[] studentsInfo;
-    ListView listView;
+    StudentDao studentDao; //Data access object for inserting/querying students
+    StudentDatabase studentDatabase; // Database instance for students
+    List<Student> studentsList; //Lst to store all concerned students from the DB
+    String[] studentArray; //Array to be bind to the adapter for viewing them in the list view
+    String[] studentsInfo; //Info needed for retrieval of the concerned courses, to get from extras
+    ListView listView; //show list of students
     ArrayAdapter<String> adapter;
+
+    /**
+     * Initialize listView, layout, DB, Dao
+     * get all extras and store them in the studentsInfo Array - username/course_name/course_section/date
+     * Update the Text View accordingly with the concerned course/section/date
+     * Call addStudentsProcess to show all students in the List View
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +55,12 @@ public class List_of_Attendees extends AppCompatActivity {
         addStudentsProcess();
     }
 
-
+    /**
+     * Retrieve all concerned students from the DB, according to the username/course_name-section-date
+     * Create an array of strings, and parse data as needed "Name - ID - Arrival Time"
+     * Attach the array to the adapter
+     * Set adapter to the list View in order to show all the data in the array as needed, through the adapter
+     */
     private void addStudentsProcess(){
         Thread t = new Thread(new Runnable() {
             @Override
@@ -56,9 +69,9 @@ public class List_of_Attendees extends AppCompatActivity {
                 studentArray = new String[studentsList.size()];
 
                 for(int i=0; i< studentsList.size(); i++){
-
-                    studentArray[i] = "Name: " + studentsList.get(i).getStudent_name() + ", ID: " + studentsList.get(i).getStudent_id() +
-                            ", Arrived @ " + studentsList.get(i).getTime();
+                    String time = studentsList.get(i).getHours() + ":" + studentsList.get(i).getMinutes() + studentsList.get(i).getAm_pm();
+                    studentArray[i] = studentsList.get(i).getStudent_name() + " - ID: " + studentsList.get(i).getStudent_id() +
+                            " - Arrived @ " + time;
                 }
             }
         });
@@ -76,6 +89,12 @@ public class List_of_Attendees extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
+
+    /**
+     * Handles the OnClick of the back button
+     * Finishes the "setOnActivityResult"
+     * @param view
+     */
     public void backToDates(View view){
         Intent replyIntent = new Intent(this, Section_Information.class);
         setResult(RESULT_CANCELED, replyIntent);

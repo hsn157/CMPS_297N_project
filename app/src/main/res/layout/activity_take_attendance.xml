@@ -31,28 +31,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/scan_ID"
-        android:layout_width="300sp"
-        android:layout_height="150sp"
-        android:layout_margin="30dp"
-        android:background="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/take_attendance_title" />
-
     <Button
         android:id="@+id/capture_id_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/smooth_edges_buttons"
-        android:paddingHorizontal="50dp"
-        android:text="Take ID Photo"
         android:onClick="scanBarcode"
+        android:paddingHorizontal="50dp"
+        android:text="Scan Barcode "
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scan_ID" />
+        app:layout_constraintTop_toBottomOf="@+id/take_attendance_title" />
 
     <Button
         android:id="@+id/manual_attendance"
