@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     tools:context=".Add_a_Course">
+    <!-- This is the layout that is used to add a course. -->
 
+    <!-- Here the user must enter the Course name (ex: CMPS297N). -->
     <EditText
         android:id="@+id/add_course_section"
         android:layout_width="wrap_content"
@@ -20,6 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Here the users enters the course section (section 1,2 ...etc). -->
     <EditText
         android:id="@+id/add_course_name"
         android:layout_width="wrap_content"
@@ -32,6 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- This button performs the intent of adding a course to the Database. -->
     <Button
         android:id="@+id/confirm_add_course"
         android:layout_width="wrap_content"
@@ -46,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
-
+    <!-- Cancel adding the course and go back to the previous screen. -->
     <Button
         android:id="@+id/back"
         android:layout_width="135dp"

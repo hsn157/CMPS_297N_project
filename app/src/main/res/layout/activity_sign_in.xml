@@ -6,8 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     tools:context=".Sign_in">
+    <!-- Sign in page layout -->
 
 
+    <!-- Button that performs signing-in -->
     <Button
         android:id="@+id/confirm_sign_in_button2"
         android:layout_width="0dp"
@@ -22,6 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- The user enters his username in this EditText view -->
     <EditText
         android:id="@+id/sign_in_email"
         android:layout_width="0dp"
@@ -40,6 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- The user enters his password here -->
     <EditText
 
         android:id="@+id/sign_in_pass"
@@ -59,6 +63,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in_email" />
 
+    <!-- Button to go back to previous activity-->
     <Button
         android:id="@+id/backtoMain"
         android:layout_width="0dp"

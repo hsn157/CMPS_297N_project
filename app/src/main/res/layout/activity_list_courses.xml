@@ -6,8 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     tools:context=".List_Courses">
+    <!-- This layout displays the courses registered for a student. -->
 
-
+    <!-- This button is used to sign out of the account, -->
+    <!-- And takes the user back to the sign-in/ sign-up page. -->
     <Button
         android:id="@+id/signOut"
         android:layout_width="match_parent"
@@ -22,6 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Title of the page. -->
     <TextView
         android:id="@+id/course_list_view_title"
         android:layout_width="wrap_content"
@@ -37,6 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- The list view that contains and displays the courses- if any. -->
     <ListView
         android:id="@+id/course_list_view"
         android:layout_width="wrap_content"
@@ -49,6 +53,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Use this button in order to add a course to user's list of courses -->
     <Button
         android:id="@+id/add_course_button"
         android:layout_width="match_parent"

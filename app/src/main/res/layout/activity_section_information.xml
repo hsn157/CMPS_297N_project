@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     tools:context=".Section_Information">
+    <!-- Layout displaying the info about a specific section in a course -->
 
+    <!-- Displays the course name and section -->
     <TextView
         android:id="@+id/course_title"
         android:layout_width="wrap_content"
@@ -23,6 +25,7 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
+    <!-- Title of the list that displays the dates that attendace was taken at -->
     <TextView
         android:id="@+id/dates_title"
         android:layout_width="156dp"
@@ -35,6 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Displays the dates that attendace was taken at -->
     <ListView
         android:id="@+id/dates_list"
         android:layout_width="wrap_content"
@@ -45,6 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Click to take attendance -->
     <Button
         android:id="@+id/take_attendance"
         android:layout_width="match_parent"
@@ -58,6 +63,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Button to go back to previous activity -->
     <Button
         android:id="@+id/back_in_dates"
         android:layout_width="match_parent"

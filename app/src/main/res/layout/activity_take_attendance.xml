@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     tools:context=".Take_Attendance">
+    <!-- Taking attendance Activity layout-->
 
+    <!-- Button to return to previous activity layout-->
     <Button
         android:id="@+id/manual_attendance2"
         android:layout_width="match_parent"
@@ -19,6 +21,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
+    <!-- Layout Title.-->
     <TextView
         android:id="@+id/take_attendance_title"
         android:layout_width="wrap_content"
@@ -32,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Click this button to use the "Scan Barcode"  feature.-->
     <Button
         android:id="@+id/capture_id_photo"
         android:layout_width="match_parent"
@@ -47,6 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/take_attendance_title" />
 
+    <!-- Click this button to take attendance by typing in Student's information manually-->
     <Button
         android:id="@+id/manual_attendance"
         android:layout_width="match_parent"

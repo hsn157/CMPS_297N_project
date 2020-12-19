@@ -6,7 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".List_of_Attendees"
     android:background="@drawable/gradient_background">
+    <!-- This layout displays information relative to a certain course.-->
+    <!-- such as course name and section, attendees for a specific date-->
 
+    <!-- Button to go back to previous page.-->
     <Button
         android:id="@+id/manual_attendance3"
         android:layout_width="match_parent"
@@ -19,6 +22,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
+    <!-- Displays the course name and section. -->
     <TextView
         android:id="@+id/course_title_attendance"
         android:layout_width="wrap_content"
@@ -33,6 +37,7 @@
         android:padding="20dp"
         />
 
+    <!-- displays the date of the lecture.-->
     <TextView
         android:id="@+id/attendance_date"
         android:layout_width="wrap_content"
@@ -46,6 +51,7 @@
         android:textSize="30sp"
         />
 
+    <!-- Title of list with the name of attendees on a relative date.-->
     <TextView
         android:id="@+id/attendees_text"
         android:layout_width="wrap_content"
@@ -60,6 +66,7 @@
         android:textSize="50sp"
         />
 
+    <!-- List with the name of attendees on a relative date.-->
     <ListView
         android:id="@+id/attendees_list"
         android:layout_width="wrap_content"

@@ -6,8 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     tools:context=".Sign_up">
+    <!-- Signing up Activity layout -->
 
 
+    <!-- EditText where the user type what he wants his username to be -->
     <EditText
         android:id="@+id/sign_up_user"
         android:layout_width="match_parent"
@@ -25,6 +27,7 @@
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="30dp" />
 
+    <!-- EditText to create Password-->
     <EditText
 
         android:id="@+id/sign_up_pass"
@@ -41,6 +44,7 @@
         app:layout_constraintBottom_toTopOf="@+id/sign_up_confirm_pass"
         tools:layout_editor_absoluteX="30dp" />
 
+    <!-- EditText to confirm password -->
     <EditText
         android:id="@+id/sign_up_confirm_pass"
         android:layout_width="match_parent"
@@ -60,6 +64,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.856" />
 
+    <!-- Button that performs signing up and all related checks-->
     <Button
         android:id="@+id/confirm_sign_up_button"
         android:layout_width="match_parent"
@@ -74,6 +79,7 @@
         app:layout_constraintBottom_toTopOf="@+id/back"
         tools:layout_editor_absoluteX="0dp" />
 
+    <!-- Buttton to go back to previous activity-->
     <Button
         android:id="@+id/back"
         android:layout_width="match_parent"

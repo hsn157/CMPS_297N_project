@@ -56,4 +56,7 @@ Take_Manual_Attendance extends AppCompatActivity {
         intent.putExtra(STUDENT_NAME, name);
         finish();
     }
+    public void go_Back(View view){
+        finish();
+    }
 }

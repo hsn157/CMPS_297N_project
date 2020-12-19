@@ -7,6 +7,10 @@
     tools:context=".ListCourseActivity"
     android:background="@drawable/gradient_background">
 
+    <!-- The main page of the application where the user have to either -->
+    <!-- Sign in or sign up.-->
+
+    <!-- Button that takes the user to sign-up page -->
     <Button
         android:id="@+id/sign_up_button"
         android:layout_width="wrap_content"
@@ -23,6 +27,7 @@
 
         />
 
+    <!-- Button that takes the user to sign-in page -->
     <Button
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"

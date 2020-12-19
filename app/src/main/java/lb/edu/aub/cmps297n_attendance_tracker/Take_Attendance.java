@@ -70,12 +70,13 @@ public class Take_Attendance extends AppCompatActivity {
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == MANUAL_ENTRY){ //check if this method was called due to a manual request entry for th student
-            studentInfo[4] = data.getExtras().getString(STUDENT_NAME);
-            studentInfo[5] = Integer.toString(data.getExtras().getInt(STUDENT_ID));
+        if(requestCode == MANUAL_ENTRY) { //check if this method was called due to a manual request entry for th student
+            if(resultCode == RESULT_OK) {
+                studentInfo[4] = data.getExtras().getString(STUDENT_NAME);
+                studentInfo[5] = Integer.toString(data.getExtras().getInt(STUDENT_ID));
 
-            addStudent();
-
+                addStudent();
+            }
         }
         else{ //Otherwise it is a barcode scanning request
 
